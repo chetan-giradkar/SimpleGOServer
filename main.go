@@ -8,6 +8,7 @@ import (
 
 func main() {
 	ginRouter := gin.New()
+	service.InitDictionary()
 
 	ginRouter.GET("/time", service.GetTimeEpoch)
 	ginRouter.GET("/datetime", service.GetDateTime)
